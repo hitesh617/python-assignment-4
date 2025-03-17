@@ -1,0 +1,30 @@
+# with open("output.txt", "a") as file:
+#     data = input("Enter text to write to the file:")
+#     file.write(data)
+#     content = file.read(data)
+#     print(content)
+#     print("Data successfully written to output.txt.")
+#     append_data = input("Enter additional text to append: ")
+#     file.write(append_data)
+#     content_file = file.read()
+#     print(content_file)
+#     print("Data successfully appended")
+
+#     file.close()
+file = open("output.txt", "a")
+data = input("Enter text to write to the file: ")
+file.write(data + "\n")
+print("Data successfully written to output.txt.")
+file.close()
+
+file = open("output.txt", "a")
+data = input("Enter additional text to append: ")
+file.write(data + "\n")
+print("Data successfully appended.")
+file.close()
+
+file = open("output.txt","r")
+print("Final content of output: ")
+for line in file:
+    print(line.strip())
+file.close()
